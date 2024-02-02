@@ -12,7 +12,7 @@ class HandleAnser {
         console.log("Käyttäjän valinta: " + this.#userInput);
     }
 
-    processAnswer() {
+    processAnswer = () => {
         switch (this.#userInput) {
             case "1":
                 this.#addData();
@@ -36,7 +36,7 @@ class HandleAnser {
         }
     }
 
-    #addData() {
+    #addData = () => {
         let userName = new String();
         let userPhone = new String();
 
@@ -46,7 +46,7 @@ class HandleAnser {
         this.#data.push(tempPerson);
     }
 
-    #searchData() {
+    #searchData = () => {
         let query = new String();
 
         console.log("Haetaan tietoja");
@@ -60,7 +60,7 @@ class HandleAnser {
         }
     }
 
-    #searchData2(query, listTosearch) {
+    #searchData2 = (query, listTosearch) => {
         console.log("Haetaan tietoja");
         let result = listTosearch.find(target => target.name === query)
         if (result === undefined) {
@@ -71,12 +71,12 @@ class HandleAnser {
         }
     }
 
-    #showData() { 
+    #showData = () => { 
         console.log("Tulostetaan tiedot");
         console.log(data.forEach(element => { console.log(`Nimi: ${element.name}\nNumero: ${element.phone}`) }))
     }
 
-    #quit() {
+    #quit = () => {
         console.log("Ohjelma lopetetaan");
         process.exit(0);
     }
